@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<title>load</title>
+<script src="./zepto.js"></script>
+<script src="./juicer.js"></script>
+<style>
+* { margin: 0; padding: 0;}
+ul, li{ list-style: none;}
+img{ width: 100px; height: 50px;}
+.load_bar{ height: 60px; line-height: 60px; text-align: center; font-size: 20px; color: #000; background: url(loading.gif) no-repeat 35% 23px;}
+.load_bar span{ display: none;}
+.vsb{ height: 0; overflow: hidden; visibility: hidden;}
+</style>
+</head>
+<body>
+
+<div class="content">
+  <ul id="productUl"></ul>
+  <div class="load_bar"><span>loading</span></div>
+</div>
+<div class="vsb"></div>
+
+<script id="tpl_product" type="text/template">
+  {@each list as it, index}
+    {@if index <= 4}
+      <li class="item_${index} {@if index==0}first{@/if}">
+        <h3>${it.brandName}<span>${it.model}</span>-${index}</h3>
+        <p>${it.allocation}</p>
+        <p>市场均价：${it.marketPrice}万</p>
+        <p><b>要买车价：</b><em>${it.price}</em>万</p>
+        <a href="#"><img src="${it.picUrl}" alt="" /></a>
+      </li>
+    {@/if}
+  {@/each}
+</script>
+
+<script id="tpl_more" type="text/template">
+  {@each list as it, index}
+    {@if index > 4}
+      <li>
+        <h3>${it.brandName}<span>${it.model}</span>-${index}</h3>
+        <p>${it.allocation}</p>
+        <p>市场均价：${it.marketPrice}万</p>
+        <p><b>要买车价：</b><em>${it.price}</em>万</p>
+        <a href="#"><img src="${it.picUrl}" alt="" /></a>
+      </li>
+    {@/if}
+  {@/each}
+</script>
+
+
+<script>
+
+$(document).ready(function() {
+  
+  //list init
+  $.ajax({
+    url: 'json.json',
+      data: {},
+      dataType: 'json',
+      jsonp: 'callback',
+      success: function(res) {
+
+        var tpl_product = $('#tpl_product').html();
+        var html = juicer(tpl_product, res.result.product);
+
+        $('#productUl').html(html);
+
+      },
+      error: function(xhr, type){
+          alert(['error',xhr,type])
+      }
+  });
+
+
+
+  //load more
+  function loadList(content, tpl, url, max) {
+
+    var counts = 0,
+        isIn = false,
+        load_bar = $('.load_bar'),
+        load_txt = $('.load_bar span'),
+        content = content,
+        tpl = tpl,
+        url = url,
+        max = max,
+        timer = null;
+
+    var viewHeight = window.innerHeight; //document.body.clientHeight //window.screen.height;
+    var pageHeight = document.body.scrollHeight;
+
+    $(window).scroll(function() {
+      var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+      //console.log(scrollTop,viewHeight,pageHeight);
+      //heightFix.html('&nbsp');
+
+      //clearTimeout(timer);
+      
+      if(counts < max && isIn == false) {
+        if(scrollTop + viewHeight >= pageHeight) {
+          isIn = true;
+
+          load_txt.show();
+
+          setTimeout(function() {
+            loadMore();
+          }, 800);
+
+        }
+      } else if(counts == max) {
+        load_txt.show().html('no more');
+      }
+        
+    });
+
+    function showBar() {
+      if(isIn == false) {
+        //var load_bar = $('<div class="load_bar">loading</div>');
+        //$('#productUl').after(load_bar);
+
+        //可增加加载提示动画
+
+      }
+    }
+
+    function loadMore() {
+
+      showBar();
+
+      $.ajax({
+        url: url,
+          data: {},
+          dataType: 'json',
+          jsonp: 'callback',
+          success: function(res) {
+
+            var html = juicer(tpl.html(), res.result.product);
+
+            content.append(html);
+
+            load_txt.hide();
+
+            counts ++;
+            isIn = false;
+          },
+          error: function(xhr, type){}
+      })
+    }
+  }
+
+  loadList($('#productUl'), $('#tpl_more'), 'json.json', 3);
+
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>

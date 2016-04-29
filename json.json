@@ -1,0 +1,122 @@
+{
+    "success": true,
+    "result": {
+        "product": {
+            "isEnd": true,
+            "list": [
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                },
+                {
+                    "id": "171",
+                    "allocation": "2015款 35 TFSI 自动标准型",
+                    "model": "A4L",
+                    "picUrl": "http://image.yaomaiche.com/mkt/Original/2015/0521/29c9373c-931b-4941-9f74-7766c39d3ecc.jpg",
+                    "marketPrice": "26.09",
+                    "price": "25.34",
+                    "backgroundId": "",
+                    "brandId": "1",
+                    "brandName": "奥迪"
+                }
+            ]
+        }
+    },
+    "error": null, 
+    "unAuthorizedRequest": false 
+}
